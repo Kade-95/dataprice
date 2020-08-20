@@ -22,3 +22,7 @@
     line-height: 17px;
     color: #0B3E83;
 }
+
+#search-box::placeholder{
+    color: #0B3E83;
+}

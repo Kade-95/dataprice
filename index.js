@@ -14,7 +14,7 @@ let appTitle = kerdx.createElement({
 let searchArea = kerdx.createElement({
     element: 'div', attributes: { id: 'search-area' }, children: [
         { element: 'i', attributes: { class: 'fas fa-search' } },
-        { element: 'input', attributes: { id: 'search-box' } }
+        { element: 'input', attributes: { id: 'search-box', placeholder: 'Start typing to see results' } }
     ]
 });
 
