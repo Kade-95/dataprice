@@ -1,7 +1,7 @@
 #main-window {
     display: grid;
     width: -webkit-fill-available;
-    padding: 2em;
+    padding: 2em 0em;
     background-color: white;
     grid-template-rows: max-content max-content 1fr;
     gap: 2em;
@@ -12,12 +12,13 @@
     align-items: center;
     justify-content: flex-start;
     width: -webkit-fill-available;
+    padding: 2em;
 }
 
 .app-title-dot {
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 }
 
 #app-title-text {
@@ -27,4 +28,20 @@
     font-size: 36px;
     line-height: 40px;
     color: #0B3E83;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+@media(min-width: 700px) {
+    #main-window {
+        padding: 2em;
+    }
+    .app-title-dot {
+        height: 30px;
+        width: 30px;
+    }
+    #app-title-text {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }

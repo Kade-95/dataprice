@@ -1,3 +1,7 @@
+#main-window .kerdx-table-container {
+    padding: 0px;
+}
+
 #main-window .kerdx-table-title {
     font-family: Lato;
     font-style: normal;
