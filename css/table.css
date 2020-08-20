@@ -10,9 +10,9 @@
 #main-window .kerdx-table-column-title {
     font-family: Lato;
     font-style: normal;
-    font-size: 9px;
-    line-height: 11px;
-    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
     color: #0B3E83;
 }
 
@@ -31,12 +31,22 @@
         line-height: 13px;
         font-weight: 400;
     }
-}
-
-@media(min-width: 700px) {
-    #main-window .kerdx-table-column-cell, #main-window .kerdx-table-column-title {
+    #main-window .kerdx-table-column-title {
         font-size: 14px;
         font-weight: 500;
         line-height: 17px;
+    }
+}
+
+@media(min-width: 700px) {
+    #main-window .kerdx-table-column-cell {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+    #main-window .kerdx-table-column-title {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 20px;
     }
 }
