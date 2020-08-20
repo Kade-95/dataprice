@@ -1,0 +1,30 @@
+#main-window {
+    display: grid;
+    width: -webkit-fill-available;
+    padding: 2em;
+    background-color: white;
+    grid-template-rows: max-content max-content 1fr;
+    gap: 2em;
+}
+
+#app-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: -webkit-fill-available;
+}
+
+.app-title-dot {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+#app-title-text {
+    font-family: Passion One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    color: #0B3E83;
+}

@@ -1,0 +1,24 @@
+#search-area {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1em;
+    padding: .5em 2em;
+    background-color: #F4F5FF;
+    border-radius: 9px;
+}
+
+#search-area:focus, #search-area:hover {
+    border: 2px solid #0B3E83;
+}
+
+#search-box {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0B3E83;
+}
