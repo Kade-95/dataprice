@@ -14,32 +14,19 @@
 #main-window .kerdx-table-column-title {
     font-family: Lato;
     font-style: normal;
-    font-size: 11px;
-    line-height: 13px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
     color: #0B3E83;
 }
 
 #main-window .kerdx-table-column-cell {
     font-family: Lato;
     font-style: normal;
-    font-size: 9px;
-    line-height: 11px;
+    font-size: 11px;
+    line-height: 13px;
     font-weight: 300;
     color: #828282;
-}
-
-@media(min-width: 500px) {
-    #main-window .kerdx-table-column-cell, #main-window .kerdx-table-column-title {
-        font-size: 11px;
-        line-height: 13px;
-        font-weight: 400;
-    }
-    #main-window .kerdx-table-column-title {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 17px;
-    }
 }
 
 @media(min-width: 700px) {

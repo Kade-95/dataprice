@@ -2,6 +2,7 @@ import { Kerdx } from 'https://kade-95.github.io/kerdx/index.js';
 import { data } from './data.js';
 
 window.kerdx = new Kerdx();
+let smallScreen = window.matchMedia("(min-width: 700px)");
 
 let appTitle = kerdx.createElement({
     element: 'span', attributes: { id: 'app-title' }, children: [
@@ -25,8 +26,11 @@ document.addEventListener('DOMContentLoaded', event => {
     main.makeElement([appTitle, searchArea, dataTable]);
 
     search();
+    monitorSize();
+    setTable();
 });
-let firstCells = dataTable.find('.kerdx-table').find('.kerdx-table-column').findAll('.kerdx-table-column-cell');
+let firstCells = dataTable.find('.kerdx-table-column').findAll('.kerdx-table-column-cell');
+let duration = dataTable.find(`.kerdx-table-column[data-name="Duration"]`);
 
 let rows = [];
 for (let i = 0; i < firstCells.length; i++) {
@@ -62,4 +66,21 @@ function search() {
             }
         }
     });
+}
+
+function setTable() {
+    if (!smallScreen.matches) {
+        duration.css({ display: 'none' });
+        dataTable.find('.kerdx-table').css({ gridTemplateColumns: 'repeat(4, 1fr)' });
+    }
+    else {
+        duration.cssRemove(['display']);
+        dataTable.find('.kerdx-table').css({ gridTemplateColumns: 'repeat(5, 1fr)' });
+    }
+}
+
+function monitorSize() {
+    window.onresize = ()=>{
+        setTable();
+    }
 }
