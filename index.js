@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', event => {
 });
 let firstCells = dataTable.find('.kerdx-table-column').findAll('.kerdx-table-column-cell');
 let duration = dataTable.find(`.kerdx-table-column[data-name="Duration"]`);
-
+let speed = dataTable.find(`.kerdx-table-column[data-name="Avg Speed(Mbps)"]`).find('.kerdx-table-column-title-text');
 let rows = [];
 for (let i = 0; i < firstCells.length; i++) {
     rows.push(firstCells[i].dataset.row);
@@ -72,10 +72,12 @@ function setTable() {
     if (!smallScreen.matches) {
         duration.css({ display: 'none' });
         dataTable.find('.kerdx-table').css({ gridTemplateColumns: 'repeat(4, 1fr)' });
+        speed.textContent = 'Mbps Dn/Up';
     }
     else {
         duration.cssRemove(['display']);
         dataTable.find('.kerdx-table').css({ gridTemplateColumns: 'repeat(5, 1fr)' });
+        speed.textContent = 'Avg Speed(Mbps)';
     }
 }
 
